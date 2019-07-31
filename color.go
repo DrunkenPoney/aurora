@@ -180,7 +180,7 @@ func (c Color) IsValid() bool {
 }
 
 func (c Color) String() string {
-	return esc + c.Nos(false) + "m"
+    return fmt.Sprintf("%s%sm", esc, c.Nos(false))
 }
 
 // Nos returns string like 1;7;31;45. It
