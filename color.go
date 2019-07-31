@@ -179,6 +179,10 @@ func (c Color) IsValid() bool {
 	return true
 }
 
+func (c Color) String() string {
+	return esc + c.Nos(false) + "m"
+}
+
 // Nos returns string like 1;7;31;45. It
 // may be an empty string for empty color.
 // If the zero is true, then the string
